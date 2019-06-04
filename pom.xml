@@ -108,9 +108,24 @@
 					<warSourceDirectory>src/main/webapp</warSourceDirectory>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+				<configuration>
+					<url>http://127.0.0.1:8080/manager/text</url> <!-- 로컬에서 로컬이기때문에 이 주소가 가능 -->
+					<path>/jblog</path>
+					<username>admin</username>
+					<password>admin</password>
+				</configuration>
+			</plugin>
 
 		</plugins>
 	</build>
+	
+
+
+
   
   
 
@@ -118,5 +133,6 @@
 		<module>jblog2-multi</module>
 		<module>jblog3-multi</module>
 		<module>jblog4-multi</module>
+		<module>jblog5-multi</module>
 	</modules>
 </project>
